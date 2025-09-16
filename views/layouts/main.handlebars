@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Expense Tracker</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+   <link rel="stylesheet" href="/css/style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+</head>
+
+<body>
+   <header>
+      <nav class="navbar is-flex-direction-row box p-5" role="navigation" aria-label="main navigation">
+         <div class="navbar-brand p-4" id="one">
+            {{#if loggedIn}}
+            <a href="/"><img src={{avatar}} id="avatar" class="image is-96x96">
+            </a>
+            {{else}}
+            <a class="navbar-item" href="/"><img src='/images/mini.png' width="40" height="40"></a>
+            {{/if}}
+            <a class="navbar-item has-text-link has-text-weight-bold" href="/">Home</a>
+            {{#if loggedIn}}
+            <a class="navbar-item has-text-link has-text-weight-bold" href="/profile">Profile</a>
+            <a class="navbar-item has-text-link has-text-weight-bold" href="/challenges">Challenges</a>
+            {{/if}}
+         </div>
+
+         <div class="navbar-end">
+            {{#if loggedIn}}
+            <div class="navbar-item"><a class="navBtn button has-text-weight-bold" id="logout">Logout</a></div>
+
+            {{else}}
+            <div class="navbar-item">
+               <a class="navBtn button is-primary has-text-weight-bold" href="/login">Login</a>
+               <a class="navBtn button is-light has-text-weight-bold" href="/signUp">Sign Up</a>
+            </div>
+            {{/if}}
+         </div>
+      </nav>
+   </header>
+   <main>
+      {{{ body }}}
+   </main>
+
+   {{#if loggedIn}}
+   <script src="/js/logout.js"></script>
+   {{/if}}
+</body>
+
+</html>

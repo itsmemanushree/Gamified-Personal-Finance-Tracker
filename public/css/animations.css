@@ -1,0 +1,154 @@
+/* Animate.css Core Animations */
+@keyframes bounce {
+    from, 20%, 53%, 80%, to {
+      transform: translateY(0);
+    }
+  
+    40%, 43% {
+      transform: translateY(-30px);
+    }
+  
+    70% {
+      transform: translateY(-15px);
+    }
+  
+    90% {
+      transform: translateY(-4px);
+    }
+  }
+  
+  .animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  .animate__bounce {
+    animation-name: bounce;
+  }
+  
+  /* Fade In */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate__fadeIn {
+    animation-name: fadeIn;
+  }
+  
+  /* Slide In */
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate__slideInUp {
+    animation-name: slideInUp;
+  }
+  
+  /* Custom Points Animation */
+  #points-display {
+    font-size: 24px;
+    color: gold;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: points-fade 1s ease-out;
+    display: none;
+    z-index: 10;
+  }
+  
+  @keyframes points-fade {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Badge Popup Animation */
+  #badge-popup {
+    font-size: 30px;
+    color: #4caf50;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 2px solid #4caf50;
+    padding: 20px;
+    border-radius: 10px;
+    animation: badge-pop 0.8s ease-out;
+    display: none;
+    z-index: 10;
+  }
+  
+  @keyframes badge-pop {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Progress Bar */
+  .progress-bar-container {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  
+  .progress-bar {
+    height: 20px;
+    width: 0;
+    background: #4caf50;
+    transition: width 1s ease-out;
+  }
+  
+  /* Confetti Placeholder */
+  @keyframes confetti-fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+  
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f44336;
+    animation: confetti-fall 2s linear infinite;
+  }
+  
+  .confetti:nth-child(odd) {
+    background: #2196f3;
+  }
+  
+  .confetti:nth-child(even) {
+    background: #ffeb3b;
+  }
+  

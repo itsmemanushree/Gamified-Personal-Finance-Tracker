@@ -1,10 +1,10 @@
-Gamified Personal Finance Tracker
+>Gamified Personal Finance Tracker
 
-Technologies: Node.js, React.js, MongoDB 
+>>Technologies: Node.js, React.js, MongoDB 
 
 A gamified personal finance web application that helps users track expenses, set budgets, and stay motivated through rewards such as points, badges, and streaks.
 
-Key Features:
+>>Key Features:
 
 Secure backend APIs built with Node.js and Express, connected to MongoDB for dynamic data storage.
 
